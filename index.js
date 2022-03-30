@@ -56,8 +56,7 @@ const antilink = JSON.parse(fs.readFileSync('./database/antilink.json'))
 img1 = fs.readFileSync('./gambar/thumb.jpg')
 img2 = fs.readFileSync('./gambar/fake.jpg')
 fakeyoi = ["Created By Lexxy Official"]
-api = ["https://myselfff.herokuapp.com/docs"]
-simbol = ["⇒"]
+simbol = ["❏"]
 const botName = setting.NamaBot
 
 //MODE
@@ -453,89 +452,8 @@ Lexxy.chatRead(from, "read")
 
 //=================( CASE & MENU )=================//
 switch (command) {
-case 'gfx1':
-case 'gfx2':
-case 'gfx5':
-if (args.length ==0) return reply(`Text Nya Mana? Contohnya\n${prefix+command} Lexxy`)
-sticWait(from)
-ini_txt = args.join(" ")
-gfx = await getBuffer(`https://hardianto.xyz/api/bot/${command}?apikey=${HardiApi}&nama=${ini_txt}`)
-Lexxy.sendMessage(from, gfx, image, { quoted: mek, caption: '*Logo By Lexxy Officia*'})
-break
-case 'gfx3':
-case 'gfx4':
-if (args.length ==0) return reply(`Text Nya Mana? Contohnya\n${prefix+command} Lexxy OFC`)
-sticWait(from)
-ini_txt1 = args[0]
-ini_txt1 = args[1]
-gfx = await getBuffer(`https://hardianto.xyz/api/bot/${command}?apikey=${HardiApi}&text1=${ini_txt1}&text2=${ini_txt2}`)
-Lexxy.sendMessage(from, gfx, image, { quoted: mek, caption: '*Logo By Lexxy Officia*'})
-break
-case 'gfx6':
-if (args.length ==0) return reply(`Text Nya Mana? Contohnya\n${prefix+command} Lexxy`)
-sticWait(from)
-ini_txt = args.join(" ")
-gfx = await getBuffer(`https://hardianto.xyz/api/bot/gura?apikey=${HardiApi}&nama=${ini_txt}`)
-Lexxy.sendMessage(from, gfx, image, { quoted: mek, caption: '*Logo By Lexxy Officia*'})
-break
-case 'tolol':
-case 'goblok':
-case 'lesbi':
-case 'pintar':
-case 'bodoh':
-case 'wibu':
-case 'sange':
-case 'ganteng':
-case 'cantik':
-reply2(`*cek ${command} kamu ${cekcek}%*`)
-break
-case 'sewabot':
-case 'sewa':
-sg = fs.readFileSync('./gambar/ppsewa.jpg')
-sw =`┏━━━━━━━━━━━━━━⬣
-┃        〔 SEWA BOT  〕
-┃▰▰▰▰▰▰▰▰▰▰▰▰▰▰
-┃⬣ SEWA + PREM ⬣
-┃⬡ 5 MINGGU : 25k
-┃⬡ 3 BULAN : 20k
-┃⬡ PERMANEN : 5k
-┃⬡ FREE PREMIUM
-┃▰▰▰▰▰▰▰▰▰▰▰▰▰▰
-┃〔 KELEBIHAN BOT 〕
-┃▰▰▰▰▰▰▰▰▰▰▰▰▰▰
-┃⬡ ON 24 JAM
-┃⬡ RUN DI RDP
-┃⬡ ANTI DELAY 
-┃⬡ ANTI LINK
-┃⬡ WELCOME TEXT
-┃⬡ FITUR 500+
-┃▰▰▰▰▰▰▰▰▰▰▰▰▰▰
-┃⬣〔  SISTEM 〕⬣
-┃⬡ TF - SEND BUKTI - JOIN GRUP
-┃▰▰▰▰▰▰▰▰▰▰▰▰▰▰
-┃ *PAYMENT*
-┃Dana : 0881-7864-684
-┃Ovo : 0823-1646-4080
-┃Pulsa : 0823-1646-4080
-┃
-┃Note :
-┃Jika Sudah Transfer Wajib Kirim
-┃Bukti Transfer Ke Nomor Di Bawah
-┃Agar Bisa Cepat Di Proses Langsung
-┃
-┃Cp : Wa.me/${owner}
-┃▰▰▰▰▰▰▰▰▰▰▰▰▰▰
-
-_Bukan Bot_ *_Wibusoft_*👍🏻`
-sw2 =`${time}`
-but = [
-{ buttonId: `#yg`, buttonText: { displayText: '️Oke Kak🗿' }, type: 1 }
-]
-sendButLoc(from, sw, sw2, sg, but)
-break
 case 'menu':
 yu = fs.readFileSync('./vn.mp3')
-var bb = 1
 const hky = speed();
 const hby = speed() - hky
 const { wa_version, mcc, mnc, os_version, device_manufacturer, device_model } = Lexxy.user.phone
@@ -563,516 +481,572 @@ st =`╭───❒ ♛ 𝙐𝙨𝙚𝙧 𝙄𝙣𝙛𝙤 ♛
 ❒ 𝘾𝙝𝙖𝙩 𝐆𝐫𝐨𝐮𝐩 : *( ${groups.length} )*
 ❒ 𝘾𝙝𝙖𝙩 𝐏𝐫𝐢𝐯𝐚𝐭𝐞 : *( ${privat.length} )*
 ❒ 𝘾𝙝𝙖𝙩 𝐓𝐨𝐭𝐚𝐥 : *( ${totalChat.length} )*
-╰─────────────────
-
-────────────────
-   ֍ *LIST MENU* ֍
-────────────────`
-st2 =`➢ 𝙊𝙩𝙝𝙚𝙧𝙨 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #store
-${bb++}.${simbol} #scbot
-${bb++}.${simbol} #owner
-${bb++}.${simbol} #sewabot
-${bb++}.${simbol} #donasi
-${bb++}.${simbol} #runtime
-${bb++}.${simbol} #speed
-${bb++}.${simbol} #cekprem
-${bb++}.${simbol} #listprem
-${bb++}.${simbol} #request <fitur>
-${bb++}.${simbol} #report <fitur>
-${bb++}.${simbol} #teruskan <text>
-
-➢ 𝙎𝙝𝙤𝙧𝙩 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #tinyurl <link>
-${bb++}.${simbol} #cuttly <link>
-${bb++}.${simbol} #shorturl <link>
-
-➢ 𝙊𝙬𝙣𝙚𝙧 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #self
-${bb++}.${simbol} #public
-${bb++}.${simbol} #readall
-${bb++}.${simbol} #broadcast <text>
-${bb++}.${simbol} #setsimbol
-${bb++}.${simbol} #setnamabot <namabot>
-${bb++}.${simbol} #setfake <reply image>
-${bb++}.${simbol} #setreply <nama>
-${bb++}.${simbol} #setthumb <reply image>
-${bb++}.${simbol} #ban 628xxx
-${bb++}.${simbol} #unban 628xxx
-${bb++}.${simbol} #addprem 628xxx
-${bb++}.${simbol} #delprem 628xxx
-
-➢ 𝙐𝙥𝙨𝙬 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #upswteks
-${bb++}.${simbol} #upswvideo
-${bb++}.${simbol} #upswimage
-
-➢ 𝙂𝙧𝙤𝙪𝙥 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #antilink
-${bb++}.${simbol} #rate
-${bb++}.${simbol} #apakah
-${bb++}.${simbol} #bisakah
-${bb++}.${simbol} #kapankah
-${bb++}.${simbol} #leave
-${bb++}.${simbol} #closegc
-${bb++}.${simbol} #opengc
-${bb++}.${simbol} #linkgrup
-${bb++}.${simbol} #listadmin
-${bb++}.${simbol} #setpp
-${bb++}.${simbol} #setppgrup
-${bb++}.${simbol} #kick @tag
-${bb++}.${simbol} #add +628
-${bb++}.${simbol} #tagall
-${bb++}.${simbol} #hidetag
-${bb++}.${simbol} #demote
-${bb++}.${simbol} #promote
-${bb++}.${simbol} #delete
-
-➢ 𝘾𝙤𝙣𝙫𝙚𝙧𝙩 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #ttp
-${bb++}.${simbol} #attp
-${bb++}.${simbol} #dare
-${bb++}.${simbol} #truth
-${bb++}.${simbol} #sticker <reply>
-${bb++}.${simbol} #toimg <reply>
-${bb++}.${simbol} #cerpen
-${bb++}.${simbol} #tongue
-${bb++}.${simbol} #pantun
-${bb++}.${simbol} #nuliskiri
-${bb++}.${simbol} #nuliskanan
-${bb++}.${simbol} #foliokiri
-${bb++}.${simbol} #foliokanan
-
-➢ 𝘼𝙣𝙞𝙢𝙚 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #baka
-${bb++}.${simbol} #tickle
-${bb++}.${simbol} #slap
-${bb++}.${simbol} #poke
-${bb++}.${simbol} #neko
-${bb++}.${simbol} #meow
-${bb++}.${simbol} #lizard
-${bb++}.${simbol} #foxGirl
-${bb++}.${simbol} #holo
-${bb++}.${simbol} #woof
-${bb++}.${simbol} #goose
-${bb++}.${simbol} #gecg
-${bb++}.${simbol} #avatar
-
-➢ 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #igdl <link>
-${bb++}.${simbol} #tiktok <link>
-${bb++}.${simbol} #ytmp3 <link>
-${bb++}.${simbol} #ytmp4 <link>
-${bb++}.${simbol} #ytplay <judul>
-${bb++}.${simbol} #playmp4 <judul>
-${bb++}.${simbol} #playmp3 <judul>
-${bb++}.${simbol} #mediafire <link>
-${bb++}.${simbol} #instagram <link>
-
-➢ 𝙏𝙞𝙢𝙚𝙡𝙞𝙣𝙚 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #asupan
-${bb++}.${simbol} #bocil
-${bb++}.${simbol} #rikagusriani
-${bb++}.${simbol} #santuy
-${bb++}.${simbol} #ukhty
-${bb++}.${simbol} #gheayubi
-${bb++}.${simbol} #nantalia
-${bb++}.${simbol} #hijaber
-
-➢ 𝙁𝙪𝙣𝙩𝙞𝙢𝙚 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #pantun
-${bb++}.${simbol} #puisi
-${bb++}.${simbol} #faktaunik
-${bb++}.${simbol} #katabijak
-${bb++}.${simbol} #katailham
-${bb++}.${simbol} #katasindiran
-${bb++}.${simbol} #katabucin
-${bb++}.${simbol} #katabucin2
-${bb++}.${simbol} #quotesislami
-${bb++}.${simbol} #quotesanime
-${bb++}.${simbol} #truth
-${bb++}.${simbol} #dare
-
-➢ 𝙎𝙚𝙖𝙧𝙘𝙝 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #waifu
-${bb++}.${simbol} #husbu
-${bb++}.${simbol} #herolist
-${bb++}.${simbol} #herodetail
-${bb++}.${simbol} #ytsearch
-${bb++}.${simbol} #pinterest
-${bb++}.${simbol} #playstore
-${bb++}.${simbol} #nekonime
-${bb++}.${simbol} #namaninja
-${bb++}.${simbol} #imgsearch
-${bb++}.${simbol} #searchgrup
-
-➢ 𝘾𝙚𝙠𝙘𝙚𝙠 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #tolol
-${bb++}.${simbol} #goblok
-${bb++}.${simbol} #lesbi
-${bb++}.${simbol} #pintar
-${bb++}.${simbol} #bodoh
-${bb++}.${simbol} #wibu
-${bb++}.${simbol} #sange
-${bb++}.${simbol} #ganteng
-${bb++}.${simbol} #cantik
-
-➢ 𝘾𝙖𝙣𝙫𝙖𝙨 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #rem
-${bb++}.${simbol} #gura
-${bb++}.${simbol} #serti1
-${bb++}.${simbol} #serti2
-${bb++}.${simbol} #serti3
-${bb++}.${simbol} #kaneki
-${bb++}.${simbol} #hartatahta
-${bb++}.${simbol} #sadboy
-${bb++}.${simbol} #girlneko
-${bb++}.${simbol} #lolimaker
-${bb++}.${simbol} #quotesmaker
-${bb++}.${simbol} #blackpink
-${bb++}.${simbol} #halloween
-${bb++}.${simbol} #3dgradient
-${bb++}.${simbol} #naturalleaves
-${bb++}.${simbol} #dropwater
-${bb++}.${simbol} #blood
-${bb++}.${simbol} #blood2
-${bb++}.${simbol} #neondevil
-${bb++}.${simbol} #neon
-${bb++}.${simbol} #neonlight
-${bb++}.${simbol} #neonlight2
-${bb++}.${simbol} #neonlight3
-${bb++}.${simbol} #greenneon
-${bb++}.${simbol} #matrix
-${bb++}.${simbol} #thunder
-${bb++}.${simbol} #thunder2
-${bb++}.${simbol} #bokeh
-${bb++}.${simbol} #carbontext
-${bb++}.${simbol} #christmas
-${bb++}.${simbol} #breakwall
-${bb++}.${simbol} #roadwarning
-${bb++}.${simbol} #engraved3d
-${bb++}.${simbol} #embossed
-${bb++}.${simbol} #writefoggy
-${bb++}.${simbol} #3dstone
-${bb++}.${simbol} #futuristic
-${bb++}.${simbol} #asketch
-${bb++}.${simbol} #bluecircuit
-${bb++}.${simbol} #space
-${bb++}.${simbol} #amagmahot
-${bb++}.${simbol} #artpapercut
-${bb++}.${simbol} #3dluxurygold
-${bb++}.${simbol} #robotr2d2
-${bb++}.${simbol} #harrypotter
-${bb++}.${simbol} #glitch3
-${bb++}.${simbol} #greenhorrorstyle
-${bb++}.${simbol} #3ddeepseametal
-${bb++}.${simbol} #leddisplayscreen
-${bb++}.${simbol} #wonderfulgraffitiart
-
-➢ 𝙍𝙖𝙣𝙙𝙤𝙢 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #fox
-${bb++}.${simbol} #cat
-${bb++}.${simbol} #dog
-${bb++}.${simbol} #birb
-${bb++}.${simbol} #koala
-${bb++}.${simbol} #panda
-${bb++}.${simbol} #meme
-${bb++}.${simbol} #nickepep
-${bb++}.${simbol} #darkmeme
-${bb++}.${simbol} #ppcouple
-${bb++}.${simbol} #katailham
-${bb++}.${simbol} #red_panda
-${bb++}.${simbol} #estetikpic
-${bb++}.${simbol} #renungan
-${bb++}.${simbol} #katasindiran
-${bb++}.${simbol} #quotesimage
-${bb++}.${simbol} #darkjokers
-${bb++}.${simbol} #randomquotes
-
-➢ 𝙒𝙖𝙡𝙡𝙥𝙖𝙥𝙚𝙧𝙨 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #wallpapermuslim
-${bb++}.${simbol} #wallpapercyberspace
-${bb++}.${simbol} #wallpaperprogramming
-${bb++}.${simbol} #wallpapermountain
-${bb++}.${simbol} #wallpapertechnology
-${bb++}.${simbol} #wallpapernaruto
-
-➢ 𝙉𝙚𝙠𝙤𝙥𝙤𝙞 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #nekopoi1
-${bb++}.${simbol} #nekopoi2
-${bb++}.${simbol} #nekopoi3
-${bb++}.${simbol} #nekopoi4
-${bb++}.${simbol} #nekopoi5
-${bb++}.${simbol} #nekopoi6
-${bb++}.${simbol} #nekopoi7
-${bb++}.${simbol} #nekopoi8
-${bb++}.${simbol} #nekopoi9
-
-➢ 𝙂𝙧𝙖𝙥𝙝𝙞𝙘 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #8bit
-${bb++}.${simbol} #pornhub
-${bb++}.${simbol} #glitch
-${bb++}.${simbol} #glitch2
-${bb++}.${simbol} #layered
-${bb++}.${simbol} #realistic
-${bb++}.${simbol} #lionlogo
-${bb++}.${simbol} #ninjalogo
-${bb++}.${simbol} #halloween2
-${bb++}.${simbol} #marvel
-${bb++}.${simbol} #cinematic
-${bb++}.${simbol} #avengers
-${bb++}.${simbol} #graffiti3
-
-➢ 𝙈𝙖𝙠𝙚𝙧 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #bneon
-${bb++}.${simbol} #matrix
-${bb++}.${simbol} #breakwall
-${bb++}.${simbol} #dropwater
-${bb++}.${simbol} #lithgtext
-${bb++}.${simbol} #crismes
-${bb++}.${simbol} #tfire
-${bb++}.${simbol} #sandw
-${bb++}.${simbol} #text3dbox
-${bb++}.${simbol} #leavest
-${bb++}.${simbol} #tlight
-${bb++}.${simbol} #nulis
-${bb++}.${simbol} #blackpink
-${bb++}.${simbol} #neon_light
-${bb++}.${simbol} #gaming
-${bb++}.${simbol} #watercolor
-
-➢ 𝙂𝙛𝙭𝙏𝙚𝙭𝙩 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #gfx1
-${bb++}.${simbol} #gfx2
-${bb++}.${simbol} #gfx3
-${bb++}.${simbol} #gfx4
-${bb++}.${simbol} #gfx5
-${bb++}.${simbol} #gfx6
-
-➢ 𝙒𝙖𝙡𝙡𝙥𝙖𝙥𝙚𝙧 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #wallneon
-${bb++}.${simbol} #wallrandom
-${bb++}.${simbol} #wallcode
-${bb++}.${simbol} #wallhacker
-${bb++}.${simbol} #wallpubg
-${bb++}.${simbol} #wallml
-
-➢ 𝙀𝙥𝙝𝙤𝙩𝙤 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #luxurygold
-${bb++}.${simbol} #watercolor
-${bb++}.${simbol} #multicolor3d
-${bb++}.${simbol} #wetglass
-${bb++}.${simbol} #galaxywallpaper
-${bb++}.${simbol} #lighttext
-${bb++}.${simbol} #beautifulflower
-${bb++}.${simbol} #puppycute
-${bb++}.${simbol} #royaltext
-${bb++}.${simbol} #heartshaped
-${bb++}.${simbol} #birthdaycake
-${bb++}.${simbol} #galaxystyle
-${bb++}.${simbol} #hologram3d
-${bb++}.${simbol} #greenneon
-${bb++}.${simbol} #glossychrome
-${bb++}.${simbol} #greenbush
-${bb++}.${simbol} #metallogo
-${bb++}.${simbol} #noeltext
-${bb++}.${simbol} #glittergold
-${bb++}.${simbol} #textcake
-${bb++}.${simbol} #starsnight
-${bb++}.${simbol} #wooden3d
-${bb++}.${simbol} #textbyname
-${bb++}.${simbol} #writegalaxy
-${bb++}.${simbol} #snow3d
-${bb++}.${simbol} #birthdayday
-${bb++}.${simbol} #goldplaybutton
-${bb++}.${simbol} #silverplaybutton
-${bb++}.${simbol} #freefire
-${bb++}.${simbol} #cartoongravity
-${bb++}.${simbol} #anonymhacker
-${bb++}.${simbol} #mlwall
-${bb++}.${simbol} #pubgmaskot
-${bb++}.${simbol} #aovwall
-${bb++}.${simbol} #logogaming
-${bb++}.${simbol} #fpslogo
-${bb++}.${simbol} #avatarlolnew
-${bb++}.${simbol} #lolbanner
-${bb++}.${simbol} #avatardota
-${bb++}.${simbol} #juventusshirt
-${bb++}.${simbol} #cutegravity
-${bb++}.${simbol} #realvintage
-${bb++}.${simbol} #codwarzone
-${bb++}.${simbol} #valorantbanner
-
-➢ 𝙏𝙚𝙭𝙩𝙥𝙧𝙤 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #rainbow
-${bb++}.${simbol} #scfi
-${bb++}.${simbol} #blue
-${bb++}.${simbol} #juice
-${bb++}.${simbol} #purple
-${bb++}.${simbol} #peridot
-${bb++}.${simbol} #metal 
-${bb++}.${simbol} #realistic
-${bb++}.${simbol} #impressive
-${bb++}.${simbol} #cracked
-${bb++}.${simbol} #magma
-${bb++}.${simbol} #thunder
-${bb++}.${simbol} #berry
-${bb++}.${simbol} #transformer 
-${bb++}.${simbol} #horror
-${bb++}.${simbol} #metallic
-${bb++}.${simbol} #circuit
-${bb++}.${simbol} #sketch
-${bb++}.${simbol} #halloween
-${bb++}.${simbol} #halloween
-${bb++}.${simbol} #halloween2
-${bb++}.${simbol} #3dgradient
-${bb++}.${simbol} #naturalleaves
-${bb++}.${simbol} #dropwater
-${bb++}.${simbol} #blood
-${bb++}.${simbol} #blood2
-${bb++}.${simbol} #snow
-${bb++}.${simbol} #cloud
-${bb++}.${simbol} #neondevil
-${bb++}.${simbol} #neon
-${bb++}.${simbol} #glowingneonlight
-${bb++}.${simbol} #neonlightglitch
-${bb++}.${simbol} #neonlightonbrickwall
-${bb++}.${simbol} #neonlight
-${bb++}.${simbol} #neonlight2
-${bb++}.${simbol} #neonlight3
-${bb++}.${simbol} #greenneon
-${bb++}.${simbol} #matrix
-${bb++}.${simbol} #thunder
-${bb++}.${simbol} #thunder2
-${bb++}.${simbol} #bokeh
-${bb++}.${simbol} #carbontext
-${bb++}.${simbol} #christmas
-${bb++}.${simbol} #breakwall
-${bb++}.${simbol} #roadwarning
-${bb++}.${simbol} #engraved3d
-${bb++}.${simbol} #embossed
-${bb++}.${simbol} #3dstone
-${bb++}.${simbol} #futuristic
-${bb++}.${simbol} #sketch
-${bb++}.${simbol} #bluecircuit
-${bb++}.${simbol} #space
-${bb++}.${simbol} #magmahot
-${bb++}.${simbol} #artpapercut
-${bb++}.${simbol} #3dluxurygold
-${bb++}.${simbol} #robotr2d2
-${bb++}.${simbol} #harrypotter
-${bb++}.${simbol} #glitch3
-${bb++}.${simbol} #greenhorror
-${bb++}.${simbol} #horrorgift
-${bb++}.${simbol} #hotmetal
-${bb++}.${simbol} #erodedmetal
-${bb++}.${simbol} #3dglowingmetal
-${bb++}.${simbol} #blackmetal
-${bb++}.${simbol} #bluemetal
-${bb++}.${simbol} #shynimetal
-${bb++}.${simbol} #rustymetal
-${bb++}.${simbol} #metalpurple
-${bb++}.${simbol} #metalrainbow
-${bb++}.${simbol} #metaldarkgold
-${bb++}.${simbol} #colorfullluxurymetal
-${bb++}.${simbol} #glossybluemetal
-${bb++}.${simbol} #3dglossymetal
-${bb++}.${simbol} #metallic
-${bb++}.${simbol} #glossymetallic
-${bb++}.${simbol} #christmastree
-${bb++}.${simbol} #sparklesmerrychristmas
-${bb++}.${simbol} #countryflag3d
-${bb++}.${simbol} #americanflag3d
-${bb++}.${simbol} #3dscfi
-${bb++}.${simbol} #3drainbow
-${bb++}.${simbol} #3dwaterpipe
-${bb++}.${simbol} #3dchrome
-${bb++}.${simbol} #bluegem
-${bb++}.${simbol} #purplegem
-${bb++}.${simbol} #pinkcandy
-${bb++}.${simbol} #transformer
-${bb++}.${simbol} #berry
-${bb++}.${simbol} #brokenglass
-${bb++}.${simbol} #3drealistic
-${bb++}.${simbol} #3dunderwater
-${bb++}.${simbol} #writeinsandsummerbeach
-${bb++}.${simbol} #sandwriting
-${bb++}.${simbol} #foilballoon
-${bb++}.${simbol} #3dglue
-${bb++}.${simbol} #1917
-${bb++}.${simbol} #minion
-${bb++}.${simbol} #doubleexposure
-${bb++}.${simbol} #holographic3d
-${bb++}.${simbol} #deluxegold
-${bb++}.${simbol} #deluxesilver
-${bb++}.${simbol} #glossycarbon
-${bb++}.${simbol} #fabric
-${bb++}.${simbol} #xmascards3d
-${bb++}.${simbol} #wicker
-${bb++}.${simbol} #fireworksparkle
-${bb++}.${simbol} #skeleton
-${bb++}.${simbol} #ultragloss
-${bb++}.${simbol} #denim
-${bb++}.${simbol} #decorategreen
-${bb++}.${simbol} #peridot
-${bb++}.${simbol} #rock
-${bb++}.${simbol} #lava
-${bb++}.${simbol} #rainbowequalizer
-${bb++}.${simbol} #purpleglass
-${bb++}.${simbol} #decorativeglass
-${bb++}.${simbol} #chocolatecake
-${bb++}.${simbol} #strawberry
-${bb++}.${simbol} #koifish
-${bb++}.${simbol} #bread
-${bb++}.${simbol} #3dbox
-${bb++}.${simbol} #freeadvancedglow
-${bb++}.${simbol} #honey
-${bb++}.${simbol} #marble
-${bb++}.${simbol} #marbleslabs
-${bb++}.${simbol} #icecold
-${bb++}.${simbol} #fruitjuice
-${bb++}.${simbol} #abstragold
-${bb++}.${simbol} #biscuit
-${bb++}.${simbol} #bagel
-${bb++}.${simbol} #wood
-${bb++}.${simbol} #hexagolden
-${bb++}.${simbol} #3ddeepseametal
-${bb++}.${simbol} #leddisplayscreen
-${bb++}.${simbol} #wonderfulgraffitiart
-
-➢ 𝙎𝙤𝙪𝙣𝙙 𝙈𝙚𝙣𝙪
-${bb++}.${simbol} #sound1
-${bb++}.${simbol} #sound2
-${bb++}.${simbol} #sound3
-${bb++}.${simbol} #sound4
-${bb++}.${simbol} #sound5
-${bb++}.${simbol} #sound6
-${bb++}.${simbol} #sound7
-${bb++}.${simbol} #sound8
-${bb++}.${simbol} #sound9
-${bb++}.${simbol} #sound10
-${bb++}.${simbol} #sound11
-${bb++}.${simbol} #sound12
-${bb++}.${simbol} #sound13
-${bb++}.${simbol} #sound14
-${bb++}.${simbol} #sound15
-${bb++}.${simbol} #sound16
-${bb++}.${simbol} #sound17
-${bb++}.${simbol} #sound18
-${bb++}.${simbol} #sound19
-${bb++}.${simbol} #sound20
-${bb++}.${simbol} #sound21
-${bb++}.${simbol} #sound22
-${bb++}.${simbol} #sound23
-${bb++}.${simbol} #sound24
-${bb++}.${simbol} #sound25`
+╰─────────────────`
+st2 =`*_${fakeyoi}_*`
 but = [
-{ buttonId: `${prefix}scbot`, buttonText: { displayText: '𝙎𝙘𝙧𝙞𝙥𝙩 𝘽𝙤𝙩🎟️' }, type: 1 },
-{ buttonId: `${prefix}owner`, buttonText: { displayText: '️𝙊𝙬𝙣𝙚𝙧 𝘽𝙤𝙩🤖️' }, type: 1 },
-{ buttonId: `${prefix}store`, buttonText: { displayText: '️𝙎𝙩𝙤𝙧𝙚 𝙈𝙚𝙣𝙪🛒' }, type: 1 }
+{ buttonId: `${prefix}sewa`, buttonText: { displayText: '𝚂𝚎𝚠𝚊 𝙱𝚘𝚝🎟️' }, type: 1 },
+{ buttonId: `${prefix}owner`, buttonText: { displayText: '️𝙾𝚠𝚗𝚎𝚛 𝙱𝚘𝚝🤖️' }, type: 1 },
+{ buttonId: `${prefix}fitur`, buttonText: { displayText: '️𝙼𝚎𝚗𝚞 𝙱𝚘𝚝🍁' }, type: 1 }
 ]
 sendButLoc(from, st, st2, img1, but)
 Lexxy.sendMessage(from, yu, audio, { mimetype: 'audio/mp4', ptt:true })
+break
+case 'menu1':
+reply2(`
+「 𝙊𝙩𝙝𝙚𝙧𝙨 𝙈𝙚𝙣𝙪 」
+${simbol} #store
+${simbol} #absen
+${simbol} #scbot
+${simbol} #owner
+${simbol} #donasi
+${simbol} #runtime
+${simbol} #speed
+${simbol} #cekprem
+${simbol} #sewabot
+${simbol} #listprem
+${simbol} #request <fitur>
+${simbol} #report <fitur>
+${simbol} #teruskan <text>
+`)
+break
+case 'menu2':
+reply2(`
+「 𝙎𝙝𝙤𝙧𝙩𝙡𝙞𝙣𝙠 𝙈𝙚𝙣𝙪 」
+${simbol} #bitly <link>
+${simbol} #tinyurl <link>
+${simbol} #cuttly <link>
+${simbol} #shorturl <link>
+`)
+break
+case 'menu3':
+reply2(`
+「 𝙊𝙬𝙣𝙚𝙧 𝙈𝙚𝙣𝙪 」
+${simbol} #self
+${simbol} #public
+${simbol} #readall
+${simbol} #bc <text>
+${simbol} #setsimbol
+${simbol} #setnamabot <namabot>
+${simbol} #setfake <reply image>
+${simbol} #setreply <nama>
+${simbol} #setthumb <reply image>
+${simbol} #ban 628xxx
+${simbol} #unban 628xxx
+${simbol} #addprem 628xxx
+${simbol} #delprem 628xxx
+`)
+break
+case 'menu4':
+reply2(`
+「 𝙐𝙥𝙨𝙬 𝙈𝙚𝙣𝙪 」
+${simbol} #upswteks
+${simbol} #upswvideo
+${simbol} #upswimage
+`)
+break
+case 'menu5':
+reply2(`
+「 𝙂𝙧𝙤𝙪𝙥 𝙈𝙚𝙣𝙪 」
+${simbol} #antilink
+${simbol} #rate
+${simbol} #apakah
+${simbol} #bisakah
+${simbol} #kapankah
+${simbol} #leave
+${simbol} #closegc
+${simbol} #opengc
+${simbol} #linkgrup
+${simbol} #grupinfo
+${simbol} #listadmin
+${simbol} #setpp
+${simbol} #setppgrup
+${simbol} #setdesc
+${simbol} #setname
+${simbol} #kick @tag
+${simbol} #add +628
+${simbol} #tagall
+${simbol} #hidetag
+${simbol} #demote
+${simbol} #promote
+${simbol} #delete
+`)
+break
+case 'menu6':
+reply2(`
+「 𝘾𝙤𝙣𝙫𝙚𝙧𝙩 𝙈𝙚𝙣𝙪 」
+${simbol} #ttp <text>
+${simbol} #attp <text>
+${simbol} #simi <hai>
+${simbol} #dare
+${simbol} #truth
+${simbol} #sticker <reply>
+${simbol} #toimg <reply>
+${simbol} #cerpen
+${simbol} #pantun
+${simbol} #katailham
+${simbol} #katasindiran
+`)
+break
+case 'menu7':
+reply2(`
+「 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙 𝙈𝙚𝙣𝙪 」
+${simbol} #igdl <link>
+${simbol} #ytplay <query>
+${simbol} #ytmp3 <link>
+${simbol} #ytmp4 <link>
+${simbol} #mediafire <link>
+${simbol} #tiktoknowm <link>
+${simbol} #instagram <link>
+`)
+break
+case 'menu8':
+reply2(`
+「 𝙎𝙚𝙖𝙧𝙘𝙝 𝙈𝙚𝙣𝙪 」
+${simbol} #herolist
+${simbol} #herodetail
+${simbol} #ytsearch
+${simbol} #pinterest
+${simbol} #playstore
+${simbol} #namaninja
+`)
+break
+case 'menu9':
+reply2(`
+「 𝘾𝙚𝙠𝙘𝙚𝙠 𝙈𝙚𝙣𝙪 」
+${simbol} #tolol
+${simbol} #goblok
+${simbol} #lesbi
+${simbol} #pintar
+${simbol} #bodoh
+${simbol} #wibu
+${simbol} #sange
+${simbol} #ganteng
+${simbol} #cantik
+`)
+break
+case 'menu10':
+reply2(`
+「 𝙍𝙖𝙣𝙙𝙤𝙢 𝙈𝙚𝙣𝙪 」
+${simbol} #fox
+${simbol} #cat
+${simbol} #dog
+${simbol} #birb
+${simbol} #koala
+${simbol} #panda
+${simbol} #meme
+${simbol} #nickepep
+${simbol} #darkmeme
+${simbol} #ppcouple
+${simbol} #katailham
+${simbol} #red_panda
+${simbol} #estetikpic
+${simbol} #renungan
+${simbol} #katasindiran
+${simbol} #quotesimage
+${simbol} #darkjokers
+${simbol} #randomquotes
+`)
+break
+case 'menu11':
+reply2(`
+「 𝙉𝙚𝙠𝙤𝙥𝙤𝙞 𝙈𝙚𝙣𝙪 」
+${simbol} #nekopoi1
+${simbol} #nekopoi2
+${simbol} #nekopoi3
+${simbol} #nekopoi4
+${simbol} #nekopoi5
+${simbol} #nekopoi6
+${simbol} #nekopoi7
+${simbol} #nekopoi8
+${simbol} #nekopoi9
+`)
+break
+case 'menu12':
+reply2(`
+「 𝙂𝙧𝙖𝙥𝙝𝙞𝙘 𝙈𝙚𝙣𝙪 」
+${simbol} #8bit
+${simbol} #pornhub
+${simbol} #glitch
+${simbol} #glitch2
+${simbol} #layered
+${simbol} #realistic
+${simbol} #lionlogo
+${simbol} #ninjalogo
+${simbol} #halloween2
+${simbol} #marvel
+${simbol} #cinematic
+${simbol} #avengers
+${simbol} #graffiti3
+`)
+break
+case 'menu13':
+reply2(`
+「 𝙈𝙖𝙠𝙚𝙧 𝙈𝙚𝙣𝙪 」
+${simbol} #bneon
+${simbol} #matrix
+${simbol} #breakwall
+${simbol} #dropwater
+${simbol} #lithgtext
+${simbol} #crismes
+${simbol} #tfire
+${simbol} #sandw
+${simbol} #text3dbox
+${simbol} #leavest
+${simbol} #tlight
+${simbol} #nulis
+${simbol} #blackpink
+${simbol} #neon_light
+${simbol} #gaming
+${simbol} #watercolor
+`)
+break
+case 'menu14':
+reply2(`
+「 𝙒𝙖𝙡𝙡𝙥𝙖𝙥𝙚𝙧 𝙈𝙚𝙣𝙪 」
+${simbol} #wallneon
+${simbol} #wallrandom
+${simbol} #wallcode
+${simbol} #wallhacker
+${simbol} #wallpubg
+${simbol} #wallml
+`)
+break
+case 'menu15':
+reply2(`
+「 𝙀𝙥𝙝𝙤𝙩𝙤 𝙈𝙚𝙣𝙪 」
+${simbol} #luxurygold
+${simbol} #watercolor
+${simbol} #multicolor3d
+${simbol} #wetglass
+${simbol} #galaxywallpaper
+${simbol} #lighttext
+${simbol} #beautifulflower
+${simbol} #puppycute
+${simbol} #royaltext
+${simbol} #heartshaped
+${simbol} #birthdaycake
+${simbol} #galaxystyle
+${simbol} #hologram3d
+${simbol} #greenneon
+${simbol} #glossychrome
+${simbol} #greenbush
+${simbol} #metallogo
+${simbol} #noeltext
+${simbol} #glittergold
+${simbol} #textcake
+${simbol} #starsnight
+${simbol} #wooden3d
+${simbol} #textbyname
+${simbol} #writegalaxy
+${simbol} #snow3d
+${simbol} #birthdayday
+${simbol} #goldplaybutton
+${simbol} #silverplaybutton
+${simbol} #freefire
+${simbol} #cartoongravity
+${simbol} #anonymhacker
+${simbol} #mlwall
+${simbol} #pubgmaskot
+${simbol} #aovwall
+${simbol} #logogaming
+${simbol} #fpslogo
+${simbol} #avatarlolnew
+${simbol} #lolbanner
+${simbol} #avatardota
+${simbol} #juventusshirt
+${simbol} #cutegravity
+${simbol} #realvintage
+${simbol} #codwarzone
+${simbol} #valorantbanner
+`)
+break
+case 'menu16':
+reply2(`
+「 𝙏𝙚𝙭𝙩𝙥𝙧𝙤 𝙈𝙚𝙣𝙪 」
+${simbol} #rainbow
+${simbol} #scfi
+${simbol} #blue
+${simbol} #juice
+${simbol} #purple
+${simbol} #peridot
+${simbol} #metal 
+${simbol} #realistic
+${simbol} #impressive
+${simbol} #cracked
+${simbol} #magma
+${simbol} #thunder
+${simbol} #berry
+${simbol} #transformer 
+${simbol} #horror
+${simbol} #metallic
+${simbol} #circuit
+${simbol} #sketch
+${simbol} #halloween
+${simbol} #halloween
+${simbol} #halloween2
+${simbol} #3dgradient
+${simbol} #naturalleaves
+${simbol} #dropwater
+${simbol} #blood
+${simbol} #blood2
+${simbol} #snow
+${simbol} #cloud
+${simbol} #neondevil
+${simbol} #neon
+${simbol} #glowingneonlight
+${simbol} #neonlightglitch
+${simbol} #neonlightonbrickwall
+${simbol} #neonlight
+${simbol} #neonlight2
+${simbol} #neonlight3
+${simbol} #greenneon
+${simbol} #matrix
+${simbol} #thunder
+${simbol} #thunder2
+${simbol} #bokeh
+${simbol} #carbontext
+${simbol} #christmas
+${simbol} #breakwall
+${simbol} #roadwarning
+${simbol} #engraved3d
+${simbol} #embossed
+${simbol} #3dstone
+${simbol} #futuristic
+${simbol} #sketch
+${simbol} #bluecircuit
+${simbol} #space
+${simbol} #magmahot
+${simbol} #artpapercut
+${simbol} #3dluxurygold
+${simbol} #robotr2d2
+${simbol} #harrypotter
+${simbol} #glitch3
+${simbol} #greenhorror
+${simbol} #horrorgift
+${simbol} #hotmetal
+${simbol} #erodedmetal
+${simbol} #3dglowingmetal
+${simbol} #blackmetal
+${simbol} #bluemetal
+${simbol} #shynimetal
+${simbol} #rustymetal
+${simbol} #metalpurple
+${simbol} #metalrainbow
+${simbol} #metaldarkgold
+${simbol} #colorfullluxurymetal
+${simbol} #glossybluemetal
+${simbol} #3dglossymetal
+${simbol} #metallic
+${simbol} #glossymetallic
+${simbol} #christmastree
+${simbol} #sparklesmerrychristmas
+${simbol} #countryflag3d
+${simbol} #americanflag3d
+${simbol} #3dscfi
+${simbol} #3drainbow
+${simbol} #3dwaterpipe
+${simbol} #3dchrome
+${simbol} #bluegem
+${simbol} #purplegem
+${simbol} #pinkcandy
+${simbol} #transformer
+${simbol} #berry
+${simbol} #brokenglass
+${simbol} #3drealistic
+${simbol} #3dunderwater
+${simbol} #writeinsandsummerbeach
+${simbol} #sandwriting
+${simbol} #foilballoon
+${simbol} #3dglue
+${simbol} #1917
+${simbol} #minion
+${simbol} #doubleexposure
+${simbol} #holographic3d
+${simbol} #deluxegold
+${simbol} #deluxesilver
+${simbol} #glossycarbon
+${simbol} #fabric
+${simbol} #xmascards3d
+${simbol} #wicker
+${simbol} #fireworksparkle
+${simbol} #skeleton
+${simbol} #ultragloss
+${simbol} #denim
+${simbol} #decorategreen
+${simbol} #peridot
+${simbol} #rock
+${simbol} #lava
+${simbol} #rainbowequalizer
+${simbol} #purpleglass
+${simbol} #decorativeglass
+${simbol} #chocolatecake
+${simbol} #strawberry
+${simbol} #koifish
+${simbol} #bread
+${simbol} #3dbox
+${simbol} #freeadvancedglow
+${simbol} #honey
+${simbol} #marble
+${simbol} #marbleslabs
+${simbol} #icecold
+${simbol} #fruitjuice
+${simbol} #abstragold
+${simbol} #biscuit
+${simbol} #bagel
+${simbol} #wood
+${simbol} #hexagolden
+${simbol} #3ddeepseametal
+${simbol} #leddisplayscreen
+${simbol} #wonderfulgraffitiart
+`)
+break
+case 'menu17':
+reply2(`
+「 𝙎𝙤𝙪𝙣𝙙 𝙈𝙚𝙣𝙪 」
+${simbol} #sound1
+${simbol} #sound2
+${simbol} #sound3
+${simbol} #sound4
+${simbol} #sound5
+${simbol} #sound6
+${simbol} #sound7
+${simbol} #sound8
+${simbol} #sound9
+${simbol} #sound10
+${simbol} #sound11
+${simbol} #sound12
+${simbol} #sound13
+${simbol} #sound14
+${simbol} #sound15
+${simbol} #sound16
+${simbol} #sound17
+${simbol} #sound18
+${simbol} #sound19
+${simbol} #sound20
+${simbol} #sound21
+${simbol} #sound22
+${simbol} #sound23
+${simbol} #sound24
+${simbol} #sound25
+`)
+break
+case 'fitur':
+ros = await Lexxy.prepareMessageFromContent(from,{
+"listMessage": {
+"title": `*_Created By ${ownerName}_*`,
+"description": `*Hallo @${sender.split('@')[0]}*\nini Adalah Fitur Bot Yg Ada , Mohon Jangan Spam Biar Bot Nya Tidak Delay, Terima Kasih Semoga Harimu Bahagia Selalu, *Support By Lexxy*`,
+"buttonText": "𝙇𝙞𝙨𝙩 𝙈𝙚𝙣𝙪",
+"listType": "SINGLE_SELECT",
+"sections": [
+{
+"title": `${time2}`,
+"rows": [
+{
+"title": "[🗣️] Others Menu ",
+"description": `Menampilkan Fitur Others`,
+"rowId": `${prefix}menu1`
+},
+{
+"title": "[⌛] Shortlink Menu",
+"description": `Menampilkan Fitur Shortlink`,
+"rowId": `${prefix}menu2`
+},
+{
+ "title": "[👤] Owner Menu",
+ "description": `Menampilkan Fitur Owner`,
+"rowId": `${prefix}menu3`
+},
+{
+"title": "[💌] Upsw Menu",
+"description": `Menampilkan Fitur Upsw`,
+"rowId": `${prefix}menu4`
+},
+{
+"title": "[👥] Group Menu",
+"description": `Menampilkan Fitur Group`,
+"rowId": `${prefix}menu5`
+},
+{
+"title": "[📤] Convert Menu",
+"description": `Menampilkan Fitur Convert`,
+"rowId": `${prefix}menu6`
+},
+{
+"title": "[📂] Download Menu",
+"description": `Menampilkan Fitur Download`,
+"rowId": `${prefix}menu7`
+},
+{
+"title": "[🔍] Search Menu",
+"description": `Menampilkan Fitur Search`,
+"rowId": `${prefix}menu8`
+},
+{
+"title": "[📒] Cekcek Menu",
+"description": `Menampilkan Fitur Cekcek`,
+"rowId": `${prefix}menu9`
+},
+{
+"title": "[☢] Random Menu️",
+"description": `Menampilkan Fitur Random`,
+"rowId": `${prefix}menu10`
+},
+{
+"title": "[🍁] Nekopoi Menu",
+"description": `Menampilkan Fitur Nekopoi`,
+"rowId": `${prefix}menu11`
+},
+{
+"title": "[💥] Graphic Menu",
+"description": `Menampilkan Fitur Graphic`,
+"rowId": `${prefix}menu12`
+},
+{
+"title": "[🏷] ️Maker Menu",
+"description": `Menampilkan Fitur Maker`,
+"rowId": `${prefix}menu13`
+},
+{
+"title": ",[🌀] Wallpaper Menu️",
+"description": `Menampilkan Fitur Wallpaper`,
+"rowId": `${prefix}menu14`
+},
+{
+"title": "[🎟️] Ephoto Menu️",
+"description": `Menampilkan Fitur Ephoto`,
+"rowId": `${prefix}menu15`
+},
+{
+"title": "[🎫] TextPro Menu",
+"description": `Menampilkan Fitur TextPro`,
+"rowId": `${prefix}menu16`
+},
+{
+"title": "[🎧] Sound Menu",
+"description": `Menampilkan Fitur Sound`,
+"rowId": `${prefix}menu17`
+},
+{
+"title": "[🛒] Store Menu️",
+"description": `Menampilkan Fitur Store`,
+"rowId": `${prefix}store`
+},
+{
+"title": "[⚙️] Script Bot",
+"description": `Menampilkan Source Code`,
+"rowId": `${prefix}scbot`
+},
+{
+"title": "[🤖️] Sewa Bot",
+"description": `Menampilkan List Harga`,
+"rowId": `${prefix}sewa`
+}
+]
+}
+]
+}
+}, {quoted: mek })
+Lexxy.relayWAMessage(ros)
 break
 case 'scbot':
 reply('Bot ini Menggunakan sc\nhttps://youtu.be/_44pvsbCR6s')
@@ -1144,25 +1118,25 @@ case 'wallpapernaruto':
 oke = await getBuffer(`https://apidhani.herokuapp.com/api/anime/naruto?apikey=${dhakey}`)
 Lexxy.sendMessage(from, oke, image, {quoted: mek, caption: '𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞 𝐋𝐞𝐱𝐱𝐲 𝐎𝐟𝐟𝐢𝐜𝐢𝐚𝐥'})
 break
-case 'quotesmaker':
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-if (args.length == 0) return reply(`Teks Nya Mana ?\nContoh : ${prefix + command} Saya Suka Kamu`)
+case 'bitly':
 sticWait(from)
-buff = await getBuffer(`https://leyscoders-api.herokuapp.com/api/quote-maker?text=${q}&apikey=${LeysKey}`)
-Lexxy.sendMessage(from, buff, image, {thumbnail: Buffer.alloc(0), quoted: mek, caption: '𝐒𝐮𝐛𝐬𝐜𝐫𝐢𝐛𝐞 𝐋𝐞𝐱𝐱𝐲 𝐎𝐟𝐟𝐢𝐜𝐢𝐚𝐥'})
+anu = await fetchJson(`https://api.xteam.xyz/shorturl/bitly?url=${q}&APIKEY=MIMINETBOT`)
+Lexxy.sendMessage(from, `𝐶𝑟𝑒𝑎𝑡𝑒𝑑 𝐵𝑦 𝐿𝑒𝑥𝑥𝑦𝑂𝑓𝑓𝑖𝑐𝑖𝑎𝑙\n\n𝐁𝐞𝐟𝐨𝐫𝐞 :\n${q}\n𝐀𝐟𝐭𝐞𝐫 :\n${anu.result.link}\n\n𝘿𝙞𝙥𝙧𝙤𝙙𝙪𝙠𝙨𝙞 :\n_${tanggal}_`, text, {quoted: mek})
 break
 case 'tinyurl':
+sticWait(from)
 anu = await fetchJson(`https://leyscoders-api.herokuapp.com/api/tinyurl?url=${q}&apikey=${LeysKey}`)
-Lexxy.sendMessage(from, `${anu.result}`, text, {quoted: mek})
+Lexxy.sendMessage(from, `𝐶𝑟𝑒𝑎𝑡𝑒𝑑 𝐵𝑦 𝐿𝑒𝑥𝑥𝑦𝑂𝑓𝑓𝑖𝑐𝑖𝑎𝑙\n\n𝐁𝐞𝐟𝐨𝐫𝐞 :\n${q}\n𝐀𝐟𝐭𝐞𝐫 :\n${anu.result}\n\n𝘿𝙞𝙥𝙧𝙤𝙙𝙪𝙠𝙨𝙞 :\n_${tanggal}_`, text, {quoted: mek})
 break
 case 'cuttly':
+sticWait(from)
 anu = await fetchJson(`https://leyscoders-api.herokuapp.com/api/cuttly?url=${q}&apikey=${LeysKey}`)
-Lexxy.sendMessage(from, `• Hasil: ${anu.result.hasil}\n• Dibuat Pada: ${anu.result.create_at}`, text, {quoted: mek})
+Lexxy.sendMessage(from, `𝐶𝑟𝑒𝑎𝑡𝑒𝑑 𝐵𝑦 𝐿𝑒𝑥𝑥𝑦𝑂𝑓𝑓𝑖𝑐𝑖𝑎𝑙\n\n𝐁𝐞𝐟𝐨𝐫𝐞 :\n${q}\n𝐀𝐟𝐭𝐞𝐫 :\n${anu.result.hasil}\n\n𝘿𝙞𝙥𝙧𝙤𝙙𝙪𝙠𝙨𝙞 :\n_${tanggal}_`, text, {quoted: mek})
 break
 case 'shorturl':
+sticWait(from)
 anu = await fetchJson(`https://leyscoders-api.herokuapp.com/api/shrturl?url=${q}&apikey=${LeysKey}`)
-Lexxy.sendMessage(from, `${anu.result}`, text, {quoted: mek})
+Lexxy.sendMessage(from, `𝐶𝑟𝑒𝑎𝑡𝑒𝑑 𝐵𝑦 𝐿𝑒𝑥𝑥𝑦𝑂𝑓𝑓𝑖𝑐𝑖𝑎𝑙\n\n𝐁𝐞𝐟𝐨𝐫𝐞 :\n${q}\n𝐀𝐟𝐭𝐞𝐫 :\n${anu.result}\n\n𝘿𝙞𝙥𝙧𝙤𝙙𝙪𝙠𝙨𝙞 :\n_${tanggal}_`, text, {quoted: mek})
 break
 case 'luxurygold':
 case 'watercolor':
@@ -1282,6 +1256,17 @@ if (args.length < 1) return reply('Mau Search Sticker Apa Nya om')
 sticWait(from)
 nyz4 = await getBuffer(`https://hardianto.xyz/api/anime/random?sfw=${command}&apikey=${HardiApi}`)
 Lexxy.sendMessage(from, nyz4, image, {thumbnail:Buffer.alloc(0), caption:`NIH KAK`,quoted: mek})
+break
+case 'waifu':
+if (isBanned)return sticBanned(from)
+sticWait(from)
+nyz4 = await getBuffer(`https://pipisan26.herokuapp.com/api/waifu?apikey=rdfHGoYr`)
+Lexxy.sendMessage(from, nyz4, image, {thumbnail:Buffer.alloc(0), caption:`Random Waifu 🔥`,quoted: mek})
+break
+case 'simi':
+bo = args.join(" ")
+sm = await fetchJson(`https://api.xteam.xyz/simsimi?kata=${bo}&APIKEY=MIMINETBOT`)
+reply(`${sm.jawaban}`)
 break
 case 'blackpink':
 case 'halloween':
@@ -1571,240 +1556,6 @@ res = await Lexxy.prepareMessageFromContent(from,{
 }, {quoted: mek })
 Lexxy.relayWAMessage(res)
 break
-case 'dosa1': 
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SEMOGA DI BERI HIDAYAH*\nLink Download \n\nhttps://www.mediafire.com/file/h2nygxbyb6n9cyo/VID-20210107-WA1468.mp4/file' })
-break
-case 'dosa2':
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SEMOGA DI BERI HIDAYAH*\nLink Download \n\nhttps://www.mediafire.com/file/pk8hozohzdc076c/VID-20210107-WA1466.mp4/file' })
-break
-case 'dosa3':	
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SEMOGA DI BERI HIDAYAH*\nLink Download \n\nhttps://www.mediafire.com/file/112q3u286tnvzjo/VID-20210107-WA1467.3gp/file' }) 
-break
-case 'dosa4':	
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SEMOGA DI BERI HIDAYAH*\nLink Download \n\nhttps://www.mediafire.com/file/arpphhxsv94ak0r/VID-20210107-WA1462.mp4/file' })
-break
-case 'dosa5':	
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SEMOGA DI BERI HIDAYAH*\nLink Download \n\nhttps://www.mediafire.com/file/us3f4j62emftbrf/VID-20210107-WA1463.mp4/file' })
-break
-case 'dosa6':	
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SEMOGA DI BERI HIDAYAH*\nLink Download \n\nhttps://www.mediafire.com/file/v4033tkl16hgf2b/VID-20210107-WA1459.mp4/file' })
-break
-case 'dosa7':
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SEMOGA DI BERI HIDAYAH*\nLink Download \n\nhttps://www.mediafire.com/file/3scnim6d1x4b8ie/VID-20210107-WA1461.mp4/file' })
-break
-case 'dosa8':	
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SEMOGA DI BERI HIDAYAH*\nLink Download \n\nhttps://www.mediafire.com/file/dx9tklonu0eq36w/VID-20210107-WA1464.mp4/file' })
-break
-case 'dosa10':	
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SEMOGA DI BERI HIDAYAH*\nLink Download \n\nhttps://www.mediafire.com/file/snwja297dv4zvtl/VID-20210107-WA0036.mp4/file' })
-break
-case 'dosa11':	
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SEMOGA DI BERI HIDAYAH*\nLink Download \n\nhttps://www.mediafire.com/file/60dqek0mqhyt6rn/VID-20210107-WA1530.mp4/file' })
-break
-case 'dosa12':	
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg')
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SEMOGA DI BERI HIDAYAH*\nLink Download \n\nhttps://www.mediafire.com/file/ni2mcdknb6zn50t/VID-20210107-WA1532.mp4/file' })  
-break
-case 'dosa13':	
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SEMOGA DI BERI HIDAYAH*\nLink Download \n\nhttps://www.mediafire.com/file/i9t96lrmd9lm71z/VID-20210107-WA1542.mp4/file' })
-break
-case 'dosa14':	
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SEMOGA DI BERI HIDAYAH*\nLink Download \n\nhttps://www.mediafire.com/file/tjqdfmp8g08dt4e/VID-20210107-WA1536.mp4/file' })
-break
-case 'dosa15':
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SEMOGA DI BERI HIDAYAH*\nLink Download \n\nhttps://www.mediafire.com/file/x034q0s16u9vyhy/VID-20210107-WA1537.mp4/file' })
-break
-case 'indo1':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/h2nygxbyb6n9cyo/VID-20210107-WA1468.mp4/file' })
-break
-case 'indo2':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/pk8hozohzdc076c/VID-20210107-WA1466.mp4/file' })
-break
-case 'indo3':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/112q3u286tnvzjo/VID-20210107-WA1467.3gp/file' }) 
-break
-case 'indo4':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/arpphhxsv94ak0r/VID-20210107-WA1462.mp4/file' })
-break
-case 'indo5':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/us3f4j62emftbrf/VID-20210107-WA1463.mp4/file' })
-break
- case 'indo6':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/v4033tkl16hgf2b/VID-20210107-WA1459.mp4/file' })
-break
- case 'indo7':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/3scnim6d1x4b8ie/VID-20210107-WA1461.mp4/file' })
-break
-  case 'indo8':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/dx9tklonu0eq36w/VID-20210107-WA1464.mp4/file' })
-break
-  case 'indo9':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/aipi6xisyppe751/VID-20210107-WA1465.mp4/file' })
-break
-  case 'indo10':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/snwja297dv4zvtl/VID-20210107-WA0036.mp4/file' })
-break
-  case 'indo11':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/60dqek0mqhyt6rn/VID-20210107-WA1530.mp4/file' })
-break
-  case 'indo12':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/ni2mcdknb6zn50t/VID-20210107-WA1532.mp4/file' })
-break
-case 'indo13':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/i9t96lrmd9lm71z/VID-20210107-WA1542.mp4/file' })
-break
-case 'indo14':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/tjqdfmp8g08dt4e/VID-20210107-WA1536.mp4/file' })
-break
-case 'indo15':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/x034q0s16u9vyhy/VID-20210107-WA1537.mp4/file' })
-break
-case 'indo16':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/mgmynqghjnon2q7/VID-20210107-WA1533.mp4/file' })
-break
-case 'indo17':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/ecly00at6adxs20/VID-20210107-WA1540.mp4/file' })
-break
- case 'indo18':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/7qkn8nuog22jsco/VID-20210107-WA1534.mp4/file' })
-break
-case 'indo19':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/vza5uaben93dfdr/VID-20210107-WA1527.mp4/file' })
-break
-case 'indo20':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/l7uzd4v9p95wpeb/VID-20210107-WA1541.mp4/file' })
-break
-case 'indo21':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/icpnxsr18j6l2pp/VID-20210107-WA1528.mp4/file' })
-break
-case 'indo22':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/cscj9taoq5s5oj9/VID-20210107-WA1538.mp4/file' })
-break
-case 'indo23':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/saer161lthn4sy3/VID-20210107-WA1525.mp4/file' })
-break
-case 'indo24':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/9jy3nj2b2ljjzxb/VID-20210107-WA1539.mp4/file' })
-break
-case 'indo25':  
-if (!isPremier)return reply(mess.premier)
-if (isBanned)return sticBanned(from)
-qute = fs.readFileSync('./gambar/fake.jpg') 
-Lexxy.sendMessage(from, qute, image, { quoted: mek, caption: '*SANGEAN AOWKWKO*\nDownload Sendiri Banh🗿\n\nhttps://www.mediafire.com/file/j3hxseqc3uoc1v7/VID-20210107-WA1526.mp4/file' })
-break 
 case 'serti1':
 case 'serti2':
 case 'serti3':
@@ -2194,6 +1945,7 @@ reply(listt)
 })
 break
 case 'herodetail':
+case 'cekhero':
 if (args.length ==0)return reply(`Nama hero nya apa? contoh\n${prefix+command} nana`)
 res = await herodetails(body.slice(12))
 her = `*Hero Details ${body.slice(12)}*
@@ -2307,6 +2059,10 @@ Lexxy.groupAdd(from, [num])
 console.log('Error :', e)
 reply('Gagal menambahkan target, mungkin karena di private')
 }
+break
+case 'sewa':
+case 'sewabot':
+reply2(`${(ind.listsewa(owner))}`)
 break
 case 'ff':
 case 'diamondff':
@@ -2602,7 +2358,7 @@ if (!isOwner) return sticOwner(from)
 if ((isMedia && !mek.message.videoMessage || isQuotedImage || isQuotedSticker) && args.length == 0) {
 boij = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 delb = await Lexxy.downloadMediaMessage(boij)
-fs.writeFileSync(`./gambar/kagura.jpg`, delb)
+fs.writeFileSync(`./gambar/thumb.jpg`, delb)
 reply('Sukses')
 } else {
 reply(`Kirim gambar dengan caption ${prefix}setthumb`)
@@ -2752,27 +2508,6 @@ _*Tunggu Proses Upload Media......*_`
 Lexxy.sendMessage(from, md, image, {quoted: flexx, caption: result })
 sendFileFromUrl(res[0].link, document, {mimetype: res[0].mime, filename: res[0].nama, quoted: mek})
 break
-case 'nekonime':
-if (isBanned)return sticBanned(from)
-sticWait(from)
-ini_res = await fetchJson(`https://docs-jojo.herokuapp.com/api/nekonime`)
-get_res = await getBuffer(ini_res.result)
-Lexxy.sendMessage(from, get_res, image, { quoted: flexx, caption: `*©Random ${command}*` })
-break
-case 'waifu':
-if (isBanned)return sticBanned(from)
-sticWait(from)
-ini_res = await fetchJson(`https://docs-jojo.herokuapp.com/api/waifu2`)
-get_res = await getBuffer(ini_res.img)
-Lexxy.sendMessage(from, get_res, image, { quoted: flexx, caption: `*©Random ${command}*` })
-break
-case 'husbu':
-if (isBanned)return sticBanned(from)
-sticWait(from)
-ini_res = await fetchJson(`https://docs-jojo.herokuapp.com/api/husbuando`)
-get_res = await getBuffer(ini_res.image)
-Lexxy.sendMessage(from, get_res, image, { quoted: flexx, caption: `*©Random ${command}*` })
-break
 case 'request':
 case 'rq':
 if (isBanned)return sticBanned(from)
@@ -2822,18 +2557,6 @@ sendMess(_.jid, `*「 PESAN SIARAN BOT 」*\n\n${body.slice(4)}`)
 }
 reply('Sukses broadcast')
 }
-break
-case 'waifu':
-case 'neko':
-case 'blowjob':
-case 'trap':
-case 'megumin':
-case 'awoo':
-case 'shinobu':
-sticWait(from)
-anu = await fetchJson(`https://waifu.pics/api/nsfw/${command}`)
-buffer = await getBuffer(anu.url)
-Lexxy.sendMessage(from, buffer, image, { quoted: mek, thumbnail: fs.readFileSync('./gambar/fake.jpg')})
 break
 case 'public':
 if (!isOwner && !mek.key.fromMe) return sticOwner(from)
@@ -2897,38 +2620,43 @@ fs.unlinkSync(ran)
 reply(`Please send a picture or reply to an image with the caption ${prefix}sticker`)
 }
 break
-case 'ytplay':
-if (isBanned)return sticBanned(from)
-if (args.length ==0)return reply('Judul nya Mana Kak?')
-bo = args.join(" ")
-sticWait(from)
-gett = await fetchJson(`https://api-yogipw.herokuapp.com/api/yt/playmp3?query=${bo}`)
-yt1 =`*Judul :* ${gett.title}\n\n*Author :* ${gett.channel}\n*Dipublikasikan :* ${gett.published}\n*Views :* ${gett.views}`
-yt2 =`Silahkan Pilih Type Media Di Bawah`
-ytg = fs.readFileSync('./gambar/logo/ytplay.jpg')
-but = [
-{ buttonId: `${prefix}ply4 ${args.join(" ")}`, buttonText: { displayText: '𝘷𝘪𝘥𝘦𝘰' }, type: 1 },
-{ buttonId: `${prefix}ply3 ${args.join(" ")}`, buttonText: { displayText: '️𝘮𝘶𝘴𝘪𝘬' }, type: 1 }
-]
-sendButLoc(from, yt1, yt2, ytg, but)
-break
-case 'ply4':
-case 'playmp4':
-if (isBanned)return sticBanned(from)
-bo = args.join(" ")
-sticLoad(from)
-ini = await fetchJson(`https://api-yogipw.herokuapp.com/api/yt/playmp4?query=${bo}`)
-p4 = await getBuffer(ini.url)
-Lexxy.sendMessage(from, p4, video)
-break
 case 'ply3':
+case 'ytplay':
 case 'playmp3':
 if (isBanned)return sticBanned(from)
 bo = args.join(" ")
 sticLoad(from)
-ini = await fetchJson(`https://api-yogipw.herokuapp.com/api/yt/playmp3?query=${bo}`)
-p3 = await getBuffer(ini.url)
-Lexxy.sendMessage(from, p3, audio)
+ini = await fetchJson(`https://pipisan26.herokuapp.com/api/ytplay?query=${bo}&apikey=rdfHGoYr`)
+kon = ini.result
+ini_txt =`𝙔𝙤𝙪𝙏𝙪𝙗𝙚 𝙋𝙡𝙖𝙮𝙈𝙪𝙨𝙞𝙠\n\n𝐉𝐮𝐝𝐮𝐥 : ${kon.title}\n𝐔𝐤𝐮𝐫𝐚𝐧 : ${kon.size}\n𝐀𝐮𝐭𝐡𝐨𝐫 : ${kon.channel}\n𝐃𝐢𝐭𝐨𝐧𝐭𝐨𝐧 : ${kon.views}\n𝐃𝐢𝐮𝐩𝐥𝐨𝐚𝐝 : ${kon.uploadDate}\n\n𝑨𝒖𝒅𝒊𝒐 𝑺𝒆𝒅𝒂𝒏𝒈 𝑫𝒊𝒌𝒊𝒓𝒊𝒎 𝑴𝒐𝒉𝒐𝒏 𝑴𝒆𝒏𝒖𝒏𝒈𝒈𝒖 𝑺𝒆𝒌𝒊𝒕𝒂𝒓 1 𝑴𝒆𝒏𝒊𝒕`
+pl3 = await getBuffer(kon.thumb)
+Lexxy.sendMessage(from, pl3, image, { quoted: mek, caption: ini_txt })
+pl2 = await getBuffer(kon.result)
+Lexxy.sendMessage(from, pl2, audio)
+break
+case 'ytmp4':
+if (isBanned)return sticBanned(from)
+bo = args.join(" ")
+sticLoad(from)
+ini = await fetchJson(`https://pipisan26.herokuapp.com/api/ytmp4?url=${bo}&apikey=rdfHGoYr`)
+kon = ini.result
+ini_txt =`𝙔𝙩𝙢𝙥4 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙚𝙧\n\n𝐉𝐮𝐝𝐮𝐥 : ${kon.title}\n𝐔𝐤𝐮𝐫𝐚𝐧 : ${kon.size}\n𝐐𝐮𝐚𝐥𝐢𝐭𝐲 : ${kon.quality}\n𝐀𝐮𝐭𝐡𝐨𝐫 : ${kon.channel}\n𝐃𝐢𝐭𝐨𝐧𝐭𝐨𝐧 : ${kon.views}\n𝐃𝐢𝐮𝐩𝐥𝐨𝐚𝐝 : ${kon.uploadDate}\n\n𝑴𝒆𝒅𝒊𝒂 𝑺𝒆𝒅𝒂𝒏𝒈 𝑫𝒊𝒌𝒊𝒓𝒊𝒎 𝑴𝒐𝒉𝒐𝒏 𝑴𝒆𝒏𝒖𝒏𝒈𝒈𝒖 𝑺𝒆𝒌𝒊𝒕𝒂𝒓 1 𝑴𝒆𝒏𝒊𝒕`
+yt4 = await getBuffer(kon.thumb)
+Lexxy.sendMessage(from, yt4, image, { quoted: mek, caption: ini_txt })
+yt5 = await getBuffer(kon.result)
+Lexxy.sendMessage(from, yt5, video)
+break
+case 'ytmp3':
+if (isBanned)return sticBanned(from)
+bo = args.join(" ")
+sticLoad(from)
+ini = await fetchJson(`https://pipisan26.herokuapp.com/api/ytmp3?url=${bo}&apikey=rdfHGoYr`)
+kon = ini.result
+ini_txt =`𝙔𝙩𝙢𝙥3 𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙚𝙧\n\n𝐉𝐮𝐝𝐮𝐥 : ${kon.title}\n𝐔𝐤𝐮𝐫𝐚𝐧 : ${kon.size}\n𝐀𝐮𝐭𝐡𝐨𝐫 : ${kon.channel}\n𝐃𝐢𝐭𝐨𝐧𝐭𝐨𝐧 : ${kon.views}\n𝐃𝐢𝐮𝐩𝐥𝐨𝐚𝐝 : ${kon.uploadDate}\n\n𝑴𝒆𝒅𝒊𝒂 𝑺𝒆𝒅𝒂𝒏𝒈 𝑫𝒊𝒌𝒊𝒓𝒊𝒎 𝑴𝒐𝒉𝒐𝒏 𝑴𝒆𝒏𝒖𝒏𝒈𝒈𝒖 𝑺𝒆𝒌𝒊𝒕𝒂𝒓 1 𝑴𝒆𝒏𝒊𝒕`
+yt4 = await getBuffer(kon.thumb)
+Lexxy.sendMessage(from, yt4, image, { quoted: mek, caption: ini_txt })
+yt5 = await getBuffer(kon.result)
+Lexxy.sendMessage(from, yt5, audio)
 break
 case 'owner':
 sendKontak(from, `${owner}`, `${ownerName}`)
@@ -2939,34 +2667,6 @@ but = [
 { buttonId: `${prefix}ytown`, buttonText: { displayText: '️𝐘𝐎𝐔𝐓𝐔𝐁𝐄' }, type: 1 }
 ]
 sendButton(from, ow, ow2, but, mek)
-break
-case 'ytmp4':
-if (isBanned)return sticBanned(from)
-if (args.length ==0)return reply('Link nya Mana Kak?')
-ini_link = args.join(" ")
-sticWait(from)
-ini = await fetchJson(`https://api-yogipw.herokuapp.com/api/download/ytmp4?url=${ini_link}`)
-anu = ini.result
-ini_txt =`*Judul* : ${anu.title}\n*Author* : ${anu.channel}\n*Publis* : ${anu.published}\n*Views* : ${anu.views}`
-yt4 = fs.readFileSync('./gambar/logo/ytdown.jpg')
-Lexxy.sendMessage(from, yt4, image, { quoted: mek, caption: ini_txt })
-res = await getBuffer(anu.url)
-sticLoad(from)
-Lexxy.sendMessage(from, res, video)
-break
-case 'ytmp3':
-if (isBanned)return sticBanned(from)
-if (args.length ==0)return reply('Link nya Mana Kak?')
-ini_link = args.join(" ")
-sticWait(from)
-ini = await fetchJson(`https://api-yogipw.herokuapp.com/api/download/ytmp3?url=${ini_link}`)
-get = ini.result
-ini_txt =`*Judul* : ${get.title}\n*Author* : ${get.channel}\n*Publis* : ${get.published}\n*Views* : ${get.views}`
-yt3 = fs.readFileSync('./gambar/logo/ytdown.jpg')
-Lexxy.sendMessage(from, yt3, image, { quoted: mek, caption: ini_txt })
-res = await getBuffer(get.url)
-sticLoad(from)
-Lexxy.sendMessage(from, res, audio)
 break
 case 'upswimage':
 if (!isOwner) return sticOwner(from)
@@ -3070,6 +2770,37 @@ if (!q) return reply("Isi teksnya!");
 Lexxy.sendMessage("status@broadcast", `${q}`, extendedText);
 reply2(`Sukses Up story wea teks ${q}`);
 break;
+case 'setname':
+if (!mek.key.fromMe && !isGroupAdmins) return sticAdmin(from)
+if (!isBotGroupAdmins) return sticBotAdmin(from);
+if (!isGroup) return sticGroup(from);
+Lexxy.groupUpdateSubject(from, `${body.slice(9)}`)
+Lexxy.sendMessage(from, `\`\`\`Sukses Mengganti nama grup menjadi\`\`\` *${body.slice(9)}*`, text, { quoted: mek })
+break
+case 'setdesc':
+if (!mek.key.fromMe && !isGroupAdmins) return sticAdmin(from)
+if (!isBotGroupAdmins) return sticBotAdmin(from);
+if (!isGroup) return sticGroup(from);
+Lexxy.groupUpdateDescription(from, `${body.slice(9)}`)
+Lexxy.sendMessage(from, `\`\`\`Sukses Mengganti deskripsi grup\`\`\` *${groupMetadata.subject}* Menjadi: *${body.slice(9)}*`, text, { quoted: mek })
+break
+case 'infogc':
+case 'infogrup':
+case 'infogrouup':
+case 'grupinfo':
+case 'groupinfo':
+if (!isGroup) return sticGroup(from);
+try {
+var pic = await Lexxy.getProfilePicture(from)
+} catch {
+var pic = 'https://i.ibb.co/Tq7d7TZ/age-hananta-495-photo.png'
+}
+let ingfo = `*G R O U P I N F O*\n\n*Name :* ${groupName}\n*ID Grup :* ${from}\n*Dibuat :* ${moment(`${groupMetadata.creation}` * 1000).tz('Asia/Jakarta').format('DD/MM/YYYY HH:mm:ss')}\n*Owner Grup :* @${groupMetadata.owner.split('@')[0]}\n*Jumlah Admin :* ${groupAdmins.length}\n*Jumlah Peserta :* ${groupMembers.length}\n*Welcome : Aktif*\n*AntiLink : ${isAntilink ? 'Aktif' : 'Mati'}*\n*Desc :* \n\n${groupMetadata.desc}`
+Lexxy.sendMessage(from, await getBuffer(pic), image, {quoted: mek, caption: ingfo, contextInfo: {"mentionedJid": [groupMetadata.owner.replace('@c.us', '@s.whatsapp.net')]}})
+break
+case 'absen':
+reply(`𝑳𝒊𝒔𝒕 𝑷𝒆𝒏𝒈𝒈𝒖𝒏𝒂 𝑩𝒐𝒕\n\n@${pendaftar}\n_Total Pengguna_ : *${pendaftar.length}*`)
+break
 //━━━━━━━━━━━━━━━[ AKHIR FITUR ]━━━━━━━━━━━━━━━\\
 default:
 if (budy.startsWith('>')) {
