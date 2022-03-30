@@ -1,3 +1,26 @@
+exports.listsewa = (owner) => {
+return `𝑳𝒊𝒔𝒕 𝑯𝒂𝒓𝒈𝒂 𝑺𝒆𝒘𝒂 𝑩𝒐𝒕
+3 𝘏𝘢𝘳𝘪 = 5k
+1 𝘔𝘪𝘯𝘨𝘨𝘶 = 7k
+2 𝘔𝘪𝘯𝘨𝘨𝘶 = 13k
+1 𝘉𝘶𝘭𝘢𝘯 = 20k
+2 𝘉𝘶𝘭𝘢𝘯 = 30k
+3 𝘉𝘶𝘭𝘢𝘯 = 50k
+
+𝐅𝐢𝐭𝐮𝐫 𝐁𝐨𝐭 ;
+Add/Antilink
+MakerMenu
+DownloadMenu
+SoundMenu
+SearchMenu
+ShortLinkMenu
+TextProMenu
+TotalFitur 350+
+
+Minat? Chat Wa
+Wa.me/${owner}
+`
+}
 exports.paymentstore = (owner) => {
 return `*PAYMENT STORE*
 Dana : 0881-7864-684
