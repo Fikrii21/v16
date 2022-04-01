@@ -55,7 +55,7 @@ const antilink = JSON.parse(fs.readFileSync('./database/antilink.json'))
 //DATAFILE
 img1 = fs.readFileSync('./gambar/thumb.jpg')
 img2 = fs.readFileSync('./gambar/fake.jpg')
-fakeyoi = ["Created By Lexxy Official"]
+fakeyoi = ["Created By Fikrii Gemoy"]
 simbol = ["❏"]
 const botName = setting.NamaBot
 
