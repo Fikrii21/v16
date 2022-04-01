@@ -467,7 +467,7 @@ st =`╭───❒ ♛ 𝙐𝙨𝙚𝙧 𝙄𝙣𝙛𝙤 ♛
 ╭──❒ ♛ 𝙄𝙉𝙁𝙊 𝘽𝙊𝙏 ♛
 ❒ 𝐍𝐚𝐦𝐞 : *${botName}*
 ❒ 𝐎𝐰𝐧𝐞𝐫 : *${ownerName}*
-❒ 𝐀𝐮𝐭𝐡𝐨𝐫 : *Lexxy Official*
+❒ 𝐀𝐮𝐭𝐡𝐨𝐫 : *Fikrii Gemoy*
 ❒ 𝐏𝐫𝐞𝐟𝐢𝐱 : *Multi Prefix*
 ❒ 𝐋𝐢𝐛 : *Baileys*
 ❒ 𝐓𝐲𝐩𝐞 : *NodeJS*
