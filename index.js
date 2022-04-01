@@ -1,4 +1,4 @@
-//𝐂𝐫𝐞𝐚𝐭𝐞𝐝 𝐁𝐲 𝐋𝐞𝐱𝐱𝐲 𝐎𝐟𝐟𝐢𝐜𝐢𝐚𝐥
+//𝐂𝐫𝐞𝐚𝐭𝐞𝐝 𝐁𝐲 Fikrii Gemoy
 
 const {
 WAConnection,
